@@ -1,0 +1,10 @@
+.react-datepicker-wrapper {
+  width: 100%;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: no-repeat right center; /* You can replace 'path_to_custom_arrow_icon.png' with the path to your custom arrow icon */
+  padding-right: 20px; /* Adjust the padding to leave space for your custom arrow icon */
+}
