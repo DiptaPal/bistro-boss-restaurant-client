@@ -7,15 +7,18 @@ import { BsFillClockFill } from "react-icons/bs";
 import { BiSolidPhoneCall } from "react-icons/bi";
 import { useForm } from "react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
+import { toast } from "react-toastify";
 
 const Contact = () => {
 
   const [disable, setDisable] = useState(false);
+  const formRef = useRef()
 
   const {
     register,
-    handleSubmit,
+    // handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
@@ -26,8 +29,16 @@ const Contact = () => {
     }
   }
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm( import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS__TEMPLATE_ID, formRef.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+    .then((result) => {
+        console.log(result.text);
+        toast.success("Message sent successfully");
+    }, (error) => {
+        console.log(error.text);
+        toast.error("Message not sent");
+    });
     reset();
   };
 
@@ -85,7 +96,8 @@ const Contact = () => {
           />
         </div>
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          ref={formRef}
+          onSubmit={sendEmail}
           className="mx-2 bg-[#F3F3F3] p-4 md:p-12"
         >
           <div className="flex flex-col md:flex-row justify-between md:gap-6 items-center md:mb-3">

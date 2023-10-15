@@ -53,7 +53,6 @@
 * React Toast 
 * Recharts
 * Sweet Alert
-* React Aos
 
 
 # Login Credentials

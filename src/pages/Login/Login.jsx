@@ -210,7 +210,15 @@ const Login = () => {
                     className="input input-bordered focus:outline-none"
                   />
                 </div>
-                <p className="text-red-500 text-sm">{validationError}</p>
+                <p
+                  className={`text-sm ${
+                    validationError === "validation successful"
+                      ? "text-green-600"
+                      : "text-red-600"
+                  }`}
+                >
+                  {validationError}
+                </p>
                 <div className="form-control mt-4">
                   <button
                     type="button"
