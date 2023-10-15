@@ -28,7 +28,7 @@ const AllUsers = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/users/admin/${id}`, {
+        fetch(`https://bistro-boss-restaurant.onrender.com/users/admin/${id}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ role: "admin" }),
@@ -61,7 +61,7 @@ const AllUsers = () => {
       //   if (result.isConfirmed) {
       //     deleteUser(user)
       //       .then(() => {
-      //         fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/users/${user._id}`, {
+      //         fetch(`https://bistro-boss-restaurant.onrender.com/users/${user._id}`, {
       //           method: "DELETE",
       //         })
       //           .then((res) => res.json())

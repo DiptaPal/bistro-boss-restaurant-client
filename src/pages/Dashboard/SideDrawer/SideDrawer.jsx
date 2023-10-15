@@ -72,7 +72,7 @@ const SideDrawer = () => {
                 {isAdmin ? (
                   <>
                     <NavLink
-                      to="/dashboard/dashboardhome"
+                      to="/dashboard/adminhome"
                       className={({ isActive }) =>
                         isActive
                           ? "flex items-center space-x-2 mb-4 text-white"
@@ -177,7 +177,7 @@ const SideDrawer = () => {
                 ) : (
                   <>
                     <NavLink
-                      to="/dashboard/dashboardhome"
+                      to="/dashboard/userhome"
                       className={({ isActive }) =>
                         isActive
                           ? "flex items-center space-x-2 mb-4 text-white"

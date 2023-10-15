@@ -34,7 +34,7 @@ const AddReview = () => {
       rating,
     };
 
-    fetch("https://bistro-boss-restaurant-server-eight.vercel.app/reviews", {
+    fetch("https://bistro-boss-restaurant.onrender.com/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

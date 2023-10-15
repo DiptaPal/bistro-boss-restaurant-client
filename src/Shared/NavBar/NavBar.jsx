@@ -54,7 +54,7 @@ const NavBar = () => {
       {user && (
         <li className="text-2xl md:text-xs lg:text-lg xl:text-xl 2xl:text-2xl">
           <NavLink
-            to="/dashboard/dashboardhome"
+            to={isAdmin ? "/dashboard/adminhome" : "/dashboard/userhome"}
             className={({ isActive }) =>
               isActive ? "text-[#EEFF25]" : "hover:text-[#EEFF25]"
             }

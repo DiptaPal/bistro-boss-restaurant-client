@@ -14,7 +14,6 @@ import Payment from "../pages/Dashboard/Payment/Payment";
 import Reservation from "../pages/Dashboard/Reservation/Reservation";
 import MyBooking from "../pages/Dashboard/MyBooking/MyBooking";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
-import DashboardHome from "../pages/Dashboard/DashboardHome/DashboardHome";
 import AddItem from "../pages/Dashboard/AddItem/AddItem";
 import ManageItem from "../pages/Dashboard/ManageItem/ManageItem";
 import ManageBooking from "../pages/Dashboard/ManageBooking/ManageBooking";
@@ -25,6 +24,8 @@ import PaymentHistory from "../pages/Dashboard/PaymentHistory/PaymentHistory";
 import ReservationPayment from "../pages/Dashboard/ReservationPayment/ReservationPayment";
 import OrderHistory from "../pages/Dashboard/OrderHistory/OrderHistory";
 import ManageOrder from "../pages/Dashboard/ManageOrder/ManageOrder";
+import AdminDashboard from "../pages/Dashboard/DashboardHome/AdminDashboard";
+import UserDashboard from "../pages/Dashboard/DashboardHome/UserDashboard";
 
 export const router = createBrowserRouter([
   {
@@ -68,8 +69,12 @@ export const router = createBrowserRouter([
     errorElement: <Error></Error>,
     children: [
       {
-        path: "dashboardhome",
-        element: <DashboardHome></DashboardHome>,
+        path: "adminhome",
+        element: (
+          <AdminRoute>
+            <AdminDashboard></AdminDashboard>
+          </AdminRoute>
+        ),
       },
       {
         path: "additem",
@@ -87,11 +92,14 @@ export const router = createBrowserRouter([
           </AdminRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/menu/${params.id}`, {
-            headers: {
-              authorization: `bearer ${localStorage.getItem("accessToken")}`,
-            },
-          }),
+          fetch(
+            `https://bistro-boss-restaurant.onrender.com/menu/${params.id}`,
+            {
+              headers: {
+                authorization: `bearer ${localStorage.getItem("accessToken")}`,
+              },
+            }
+          ),
       },
       {
         path: "manageitem",
@@ -126,6 +134,10 @@ export const router = createBrowserRouter([
         ),
       },
       {
+        path: "userhome",
+        element: <UserDashboard></UserDashboard>,
+      },
+      {
         path: "reservation",
         element: <Reservation></Reservation>,
       },
@@ -145,11 +157,14 @@ export const router = createBrowserRouter([
         path: "reservation-payment/:id",
         element: <ReservationPayment></ReservationPayment>,
         loader: ({ params }) =>
-          fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/reservationpayment/${params.id}`, {
-            headers: {
-              authorization: `bearer ${localStorage.getItem("accessToken")}`,
-            },
-          }),
+          fetch(
+            `https://bistro-boss-restaurant.onrender.com/reservationpayment/${params.id}`,
+            {
+              headers: {
+                authorization: `bearer ${localStorage.getItem("accessToken")}`,
+              },
+            }
+          ),
       },
       {
         path: "addreview",

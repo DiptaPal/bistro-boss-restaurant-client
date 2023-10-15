@@ -25,7 +25,7 @@ const MyCart = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/carts/${id}`, {
+        fetch(`https://bistro-boss-restaurant.onrender.com/carts/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -57,7 +57,7 @@ const MyCart = () => {
   };
 
   const updateCart = (updatedItem) => {
-    fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/carts/${updatedItem._id}`, {
+    fetch(`https://bistro-boss-restaurant.onrender.com/carts/${updatedItem._id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

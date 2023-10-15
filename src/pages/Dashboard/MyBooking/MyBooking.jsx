@@ -21,7 +21,7 @@ const MyBooking = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/reservation/${id}`, {
+        fetch(`https://bistro-boss-restaurant.onrender.com/reservation/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

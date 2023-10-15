@@ -44,7 +44,7 @@ const Login = () => {
     // }
     if (validateCaptcha(validationCode) == true) {
       setDisabled(false);
-      setValidationError("");
+      setValidationError("validation successful");
     } else {
       setDisabled(true);
       setValidationError("Doesn't match. Please try again.");
@@ -72,7 +72,7 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -97,7 +97,7 @@ const Login = () => {
   const handleFacebookSignIn = () => {
     facebookSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -123,7 +123,7 @@ const Login = () => {
   const handleGithubSignIn = () => {
     githubSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant.onrender.com/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
