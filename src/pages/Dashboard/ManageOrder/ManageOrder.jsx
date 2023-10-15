@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../hooks/useAuth";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
 

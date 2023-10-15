@@ -87,7 +87,7 @@ export const router = createBrowserRouter([
           </AdminRoute>
         ),
         loader: ({ params }) =>
-          fetch(`https://bistro-boss-restaurant-server-theta.vercel.app/menu/${params.id}`, {
+          fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/menu/${params.id}`, {
             headers: {
               authorization: `bearer ${localStorage.getItem("accessToken")}`,
             },
@@ -145,7 +145,7 @@ export const router = createBrowserRouter([
         path: "reservation-payment/:id",
         element: <ReservationPayment></ReservationPayment>,
         loader: ({ params }) =>
-          fetch(`https://bistro-boss-restaurant-server-theta.vercel.app/reservationpayment/${params.id}`, {
+          fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/reservationpayment/${params.id}`, {
             headers: {
               authorization: `bearer ${localStorage.getItem("accessToken")}`,
             },

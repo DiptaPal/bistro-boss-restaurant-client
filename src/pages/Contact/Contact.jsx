@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import Hero from "../../Shared/Hero/Hero";
 import heroImage from "../../assets/contact/banner.jpg";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";

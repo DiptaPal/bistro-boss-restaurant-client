@@ -15,7 +15,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Login = () => {
@@ -72,7 +72,7 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-theta.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -97,7 +97,7 @@ const Login = () => {
   const handleFacebookSignIn = () => {
     facebookSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-theta.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -123,7 +123,7 @@ const Login = () => {
   const handleGithubSignIn = () => {
     githubSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-theta.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

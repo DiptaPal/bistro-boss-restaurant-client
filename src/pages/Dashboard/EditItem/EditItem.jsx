@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { ImSpoonKnife } from "react-icons/im";
 import { toast } from "react-toastify";

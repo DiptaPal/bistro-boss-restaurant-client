@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { useState } from "react";
 import { Rating, RoundedStar } from "@smastrom/react-rating";
@@ -34,7 +34,7 @@ const AddReview = () => {
       rating,
     };
 
-    fetch("https://bistro-boss-restaurant-server-theta.vercel.app/reviews", {
+    fetch("https://bistro-boss-restaurant-server-eight.vercel.app/reviews", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

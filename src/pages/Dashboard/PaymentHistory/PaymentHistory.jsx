@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { useQuery } from "@tanstack/react-query";
 import useAuth from "../../../hooks/useAuth";

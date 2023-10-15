@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useLocation } from "react-router-dom";
 import { Elements } from "@stripe/react-stripe-js";
 import useCart from "../../../hooks/useCart";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import ReservationCheckoutForm from "./ReservationCheckoutForm";
 
 const ReservationPayment = () => {

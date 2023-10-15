@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // You can use a different icon library if you prefer
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const Registration = () => {
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ const Registration = () => {
       .then((result) => {
         updateUserProfile(data.name, data.photoURL)
           .then(() => {
-            fetch("https://bistro-boss-restaurant-server-theta.vercel.app/users", {
+            fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
               method: "POST",
               headers: {
                 "Content-type": "application/json",
@@ -71,7 +71,7 @@ const Registration = () => {
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-theta.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -96,7 +96,7 @@ const Registration = () => {
   const handleFacebookSignIn = () => {
     facebookSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-theta.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -122,7 +122,7 @@ const Registration = () => {
   const handleGithubSignIn = () => {
     githubSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-theta.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-eight.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

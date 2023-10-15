@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { RiDeleteBinLine, RiShieldUserFill } from "react-icons/ri";
 import { toast } from "react-toastify";
@@ -28,7 +28,7 @@ const AllUsers = () => {
       confirmButtonText: "Yes",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://bistro-boss-restaurant-server-theta.vercel.app/users/admin/${id}`, {
+        fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/users/admin/${id}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ role: "admin" }),
@@ -61,7 +61,7 @@ const AllUsers = () => {
       //   if (result.isConfirmed) {
       //     deleteUser(user)
       //       .then(() => {
-      //         fetch(`https://bistro-boss-restaurant-server-theta.vercel.app/users/${user._id}`, {
+      //         fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/users/${user._id}`, {
       //           method: "DELETE",
       //         })
       //           .then((res) => res.json())

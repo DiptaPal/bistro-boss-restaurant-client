@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -21,7 +21,7 @@ const MyBooking = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://bistro-boss-restaurant-server-theta.vercel.app/reservation/${id}`, {
+        fetch(`https://bistro-boss-restaurant-server-eight.vercel.app/reservation/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
