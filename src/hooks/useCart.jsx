@@ -9,7 +9,7 @@ const useCart = () => {
     queryKey: ["carts", user?.email],
     enabled: !loading,
     // queryFn: async () => {
-    //     const res = await fetch(`https://bistro-boss-restaurant-server-eight.vercel.app//carts?email=${user?.email}`, { headers: {
+    //     const res = await fetch(`https://bistro-boss-restaurant-server-2eh97srxl-diptapal.vercel.app//carts?email=${user?.email}`, { headers: {
     //         authorization: `bearer ${token}`
     //     }})
     //     return res.json();

@@ -27,7 +27,7 @@ const FoodCard = ({ menu }) => {
   };
   const handleAddToCart = () => {
     if (user && user?.email) {
-      fetch("https://bistro-boss-restaurant-server-eight.vercel.app//carts", {
+      fetch("https://bistro-boss-restaurant-server-2eh97srxl-diptapal.vercel.app//carts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
