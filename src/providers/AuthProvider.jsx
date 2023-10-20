@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
       //get and set accessToken
       if(currentUser) {
         axios
-          .post("https://bistro-boss-restaurant-server-woad.vercel.app/jwt", {
+          .post("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/jwt", {
             email: currentUser.email,
           })
           .then((data) => {

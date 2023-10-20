@@ -91,16 +91,16 @@ Currently, two official plugins are available:
 <div style="visibility:hidden">{"dataname":"environment","colvar":"varname","colval":"value"}
 
 
-### firebase(client site hosting): https://bistro-boss-restaurant-7fc61.firebaseapp.com/
+### firebase(client site hosting): https://bistro-boss-restaurant-7fc61.firebaseapp.com
 
 set all environment variables
-### vercel(server site hosting): https://bistro-boss-restaurant-server-woad.vercel.app
+### vercel(server site hosting): https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app
 
 //set all environment variables and add extra environment variable which is:
 
 <code>NODE_VERSION: v18.18.0 </code>//must be check the version in terminal: <code>node -v</code>
 
-### render(server site hosting): https://bistro-boss-restaurant.onrender.com/
+### render(server site hosting): https://bistro-boss-restaurant.onrender.com
 
 </div>
 

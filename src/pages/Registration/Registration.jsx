@@ -38,7 +38,7 @@ const Registration = () => {
       .then((result) => {
         updateUserProfile(data.name, data.photoURL)
           .then(() => {
-            fetch("https://bistro-boss-restaurant-server-woad.vercel.app/users", {
+            fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/users", {
               method: "POST",
               headers: {
                 "Content-type": "application/json",
@@ -71,7 +71,7 @@ const Registration = () => {
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-woad.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -96,7 +96,7 @@ const Registration = () => {
   const handleFacebookSignIn = () => {
     facebookSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-woad.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -122,7 +122,7 @@ const Registration = () => {
   const handleGithubSignIn = () => {
     githubSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-woad.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

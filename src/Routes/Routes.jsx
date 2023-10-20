@@ -93,7 +93,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://bistro-boss-restaurant-server-woad.vercel.app/menu/${params.id}`,
+            `https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/menu/${params.id}`,
             {
               headers: {
                 authorization: `bearer ${localStorage.getItem("accessToken")}`,
@@ -158,7 +158,7 @@ export const router = createBrowserRouter([
         element: <ReservationPayment></ReservationPayment>,
         loader: ({ params }) =>
           fetch(
-            `https://bistro-boss-restaurant-server-woad.vercel.app/reservationpayment/${params.id}`,
+            `https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/reservationpayment/${params.id}`,
             {
               headers: {
                 authorization: `bearer ${localStorage.getItem("accessToken")}`,

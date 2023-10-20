@@ -9,7 +9,7 @@ const useMenu = () => {
     // const accessToken = localStorage.getItem('accessToken');
 
     // useEffect(() => {
-    //     fetch("https://bistro-boss-restaurant-server-woad.vercel.app/menu")
+    //     fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/menu")
     //     .then(res => res.json())
     //     .then((data) => {
     //         setMenu(data)
@@ -20,7 +20,7 @@ const useMenu = () => {
     const {data: menu = [], isLoading: loading, refetch} = useQuery({
         queryKey: ['menu'],
         queryFn: async () => {
-            const res = await fetch("https://bistro-boss-restaurant-server-woad.vercel.app/menu")
+            const res = await fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/menu")
             const data = await res.json();
             return data;
         }

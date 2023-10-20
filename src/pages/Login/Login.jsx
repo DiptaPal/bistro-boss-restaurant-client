@@ -72,7 +72,7 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     googleSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-woad.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -97,7 +97,7 @@ const Login = () => {
   const handleFacebookSignIn = () => {
     facebookSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-woad.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -123,7 +123,7 @@ const Login = () => {
   const handleGithubSignIn = () => {
     githubSignIn().then((result) => {
       const user = result.user;
-      fetch("https://bistro-boss-restaurant-server-woad.vercel.app/users", {
+      fetch("https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app/users", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
