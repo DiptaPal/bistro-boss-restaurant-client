@@ -91,7 +91,9 @@ Currently, two official plugins are available:
 <div style="visibility:hidden">{"dataname":"environment","colvar":"varname","colval":"value"}
 
 
-### firebase(client site hosting): https://bistro-boss-restaurant-7fc61.firebaseapp.com
+### firebase(client site hosting): https://bistro-boss-restaurant-7fc61.firebaseapp.com //error has
+
+### netlify(client site hosting): https://bistro-boss-restaurant-ph.netlify.app/
 
 set all environment variables
 ### vercel(server site hosting): https://bistro-boss-restaurant-server-l2ff0sdju-diptapal.vercel.app
