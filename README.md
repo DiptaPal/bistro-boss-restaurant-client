@@ -94,7 +94,7 @@ Currently, two official plugins are available:
 ### firebase(client site hosting): https://bistro-boss-restaurant-7fc61.firebaseapp.com/
 
 set all environment variables
-### vercel(server site hosting): https://bistro-boss-restaurant-server-2eh97srxl-diptapal.vercel.app/
+### vercel(server site hosting): https://bistro-boss-restaurant-server-woad.vercel.app
 
 //set all environment variables and add extra environment variable which is:
 
